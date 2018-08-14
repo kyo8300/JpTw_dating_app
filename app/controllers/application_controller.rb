@@ -1,6 +1,5 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
-  def hello
-      render plain: "Hello!"
-  end      
+  before_action :authenticate_user!, only: [:loginpage]
+     
 end

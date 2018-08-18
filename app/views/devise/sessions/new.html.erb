@@ -1,26 +1,40 @@
-<h2>Log in</h2>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
+<body class="body1">  
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+        <div class="card card-signin my-5">
+          <div class="card-body">
+            <h5 class="card-title text-center">Log in</h5>
+            <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: {class: "form-signin"} ) do |f| %>
+              <%= devise_error_messages! %>
+              <div class="form-label-group field">
+                <%= f.email_field :email, :class => "form-control", :placeholder => "Email address" , autofocus: true, :autocomplete => "email" %>
+                <%= f.label :email %>
+                 <!-- ??? -->
+              </div>
 
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
+              <div class="form-label-group field">
+                <%= f.password_field :password, :class => "form-control", :placeholder => "Password", :autocomplete => "off" %>
+                <%= f.label :password %>
+              </div>
+              
+              <% if devise_mapping.rememberable? -%>
+              <div class="custom-control custom-checkbox mb-3 field">
+                <%= f.check_box :remember_me , :class => "custom-control-input"%>
+                <%= f.label :remember_me, 'Remember password', :class => "custom-control-label" %>
+              </div>
+              <% end -%>
 
-  <% if devise_mapping.rememberable? -%>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
+              <%= f.submit "Log in", :class => "btn btn-lg btn-primary btn-block text-uppercase actions" %>
+              <div class="loginlabel"><%= render "devise/shared/links" %></div>
+              <hr class="my-4">
+              <button class="btn btn-lg btn-google btn-block text-uppercase" type="submit"><i class="fa fa-google mr-2"></i> Log in with Google</button>
+              <button class="btn btn-lg btn-facebook btn-block text-uppercase" type="submit"><i class="fa fa-facebook-f"></i> Log in with Facebook</button>
+            <% end %>
+          </div>
+        </div>
+      </div>
     </div>
-  <% end -%>
-
-  <div class="actions">
-    <%= f.submit "Log in" %>
   </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</body>  

@@ -11,8 +11,14 @@
 // about supported directives.
 //
 //= require rails-ujs
-//= require jquery
+//= require jquery3
+//= require popper
 //= require bootstrap-sprockets
-//= require bootstrap
+//= require js/creative
+//= require js/creative.min
+//= require js/jquery.magnific-popup
+//= require scrollreveal/scrollreveal
+//= require jquery-easing/jquery.easing.compatibility
+//= require jquery-easing/jquery.easing
 //= require turbolinks
 //= require_tree .

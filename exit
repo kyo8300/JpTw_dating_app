@@ -1,0 +1,41 @@
+[33mcommit 3c40a88617cd79c3890bafff880b7207c5661461[m[33m ([m[1;36mHEAD -> [m[1;32mloginpage[m[33m, [m[1;31morigin/master[m[33m, [m[1;32mmaster[m[33m)[m
+Author: kametyou <kametyou777@gmail.com>
+Date:   Tue Aug 14 14:38:55 2018 +0000
+
+    made a loginpage
+
+[33mcommit 6bc60093d9e3b53a164fd484ac6d7ade35451353[m[33m ([m[1;31morigin/relationship-of-users[m[33m, [m[1;32mrelationship-of-users[m[33m)[m
+Author: kametyou <kametyou777@gmail.com>
+Date:   Tue Aug 14 13:52:03 2018 +0000
+
+    add relationship model
+
+[33mcommit 244f63172627abdca22780e370d0f8c617aebc77[m
+Author: kametyou <kametyou777@gmail.com>
+Date:   Tue Aug 14 13:32:18 2018 +0000
+
+    install devise
+
+[33mcommit a9c961c7190e03446325a7ce8784cc4497e76c70[m[33m ([m[1;32mmake-layout[m[33m)[m
+Author: kametyou <kametyou777@gmail.com>
+Date:   Tue Aug 14 12:54:12 2018 +0000
+
+    Add navbar at Home page
+
+[33mcommit 6bd9ea816bc7c5c6e2680e125c8b221dc837d0eb[m
+Author: kametyou <kametyou777@gmail.com>
+Date:   Sun Aug 12 03:16:55 2018 +0000
+
+    update gemfile
+
+[33mcommit 3db0b6a5800e2dc7d4d598d2adc633272cdad1c1[m
+Author: EC2 Default User <ec2-user@ip-172-31-33-114.us-east-2.compute.internal>
+Date:   Sun Aug 12 03:13:52 2018 +0000
+
+    Add hello
+
+[33mcommit 71137214abddf16ad8aa96aab6b013854653dabf[m
+Author: EC2 Default User <ec2-user@ip-172-31-33-114.us-east-2.compute.internal>
+Date:   Sun Aug 12 03:07:54 2018 +0000
+
+    Initial commit

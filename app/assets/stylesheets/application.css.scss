@@ -54,9 +54,9 @@ footer {
 .body1 {
   background: hotpink;
   /* fallback for old browsers */
-  background-image: -webkit-url("../img/signup.jpg");
+  background-image: -webkit-url("../img/signup1.jpg");
   /* Chrome 10-25, Safari 5.1-6 */
-  background-image: url("../img/signup.jpg");
+  background-image: url("../img/signup1.jpg");
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   background-size: cover;
 }
@@ -160,4 +160,8 @@ footer {
     text-align: center;
     margin-top: 20px;
     margin-bottom: 0;
+}
+
+.selectform{
+  margin-bottom: 30px;
 }

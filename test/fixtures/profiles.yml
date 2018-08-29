@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  username: MyString
+  sex: 1
+  birth: 2018-08-27
+  age: 1
+  nationality: 1
+  height: 1
+  occupation: 1
+  singleword: MyText
+
+two:
+  username: MyString
+  sex: 1
+  birth: 2018-08-27
+  age: 1
+  nationality: 1
+  height: 1
+  occupation: 1
+  singleword: MyText

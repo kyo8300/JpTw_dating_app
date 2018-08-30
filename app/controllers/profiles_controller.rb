@@ -53,7 +53,7 @@ class ProfilesController < ApplicationController
           params.require(:profile).permit(
               :username, :sex, :birth, 
               :age, :nationality, :height, 
-              :occupation, :singleword
+              :occupation, :singleword, :image
           )
       end 
       

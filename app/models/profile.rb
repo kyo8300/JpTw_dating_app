@@ -10,6 +10,7 @@ class Profile < ApplicationRecord
     validates :height, numericality: { only_integer: true, greater_than_or_equal_to: 130, less_than_or_equal_to: 200 }
     validates :singleword, length: {maximum: 100}
     belongs_to :user
+    mount_uploader :image, ImageUploader
   
   
     def calage

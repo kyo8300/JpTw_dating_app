@@ -1,5 +1,6 @@
 class ProfilesController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :edit, :update,:destroy]
+  before_action :only_profile_user,  only: [:edit, :update, :destroy]
   before_action :set_profile, only: [:edit, :update]
   
   
@@ -12,6 +13,7 @@ class ProfilesController < ApplicationController
     @profile = current_user.build_profile(profile_params)
     @profile.user_id = current_user.id 
     @profile.age = @profile.calage
+    
     
     if @profile.save
       if @profile.age < 18

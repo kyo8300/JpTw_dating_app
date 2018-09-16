@@ -1,4 +1,4 @@
-<body class="body1">  
+<body class="body2">  
   <div class="container">
     <div class="row">
       <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
@@ -10,9 +10,9 @@
               <div>
                 <div class="text-center mb-4">
                   <% if @profile.image? %>
-                    <%= image_tag @profile.image.url, :class => "rounded-circle" %>
+                    <%= image_tag @profile.image.thumb.url, :class => "rounded-circle" %>
                   <% else %>
-                    <img src="//placehold.it/200" class="avatar img-circle rounded-circle" alt="avatar">
+                    <img src="/img/noimage.jpg" class="avatar img-circle rounded-circle" alt="avatar">
                   <% end %>
                   <h6 class="mt-3 mb-3">Change a photo...</h6>
           

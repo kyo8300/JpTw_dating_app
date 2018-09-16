@@ -13,7 +13,10 @@
 //= require rails-ujs
 //= require jquery3
 //= require popper
-//= require bootstrap-sprockets
+//= require bootstrap
+//= require like.js
+//= require jquery.lettering.js
+//= require jquery.textillate.js
 //= require js/creative
 //= require js/creative.min
 //= require js/jquery.magnific-popup
@@ -22,3 +25,7 @@
 //= require jquery-easing/jquery.easing
 //= require turbolinks
 //= require_tree .
+
+$(document).ready(function(){
+    $('.dropdown-toggle').dropdown();
+});

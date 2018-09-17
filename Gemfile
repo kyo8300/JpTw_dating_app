@@ -18,6 +18,8 @@ gem 'jbuilder',                '2.7.0'
 gem 'devise'
 gem "font-awesome-rails"
 gem 'popper_js', '~> 1.14.3'
+gem 'omniauth'
+gem 'omniauth-facebook'
 
 group :development, :test do
   gem 'sqlite3', '1.3.13'

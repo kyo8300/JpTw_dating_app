@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  
+
   devise_for :users, controllers: {omniauth_callbacks: 'users/omniauth_callbacks'}
   get 'pages/loginpage'
   get 'profiles/edit'
@@ -11,6 +13,7 @@ Rails.application.routes.draw do
     end
   end
   
+  resources :matching, only: [:index, :show]
   resources :profiles, except: [:edit]
   resources :relationships, only: [:create, :destroy]
 end

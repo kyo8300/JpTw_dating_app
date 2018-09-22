@@ -8,35 +8,29 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <%= link_to 'Home', '#', :class => 'nav-link' %>
+        <%= link_to '検索する', '#', :class => 'nav-link' %>
       </li>
       <li class="nav-item">
-        <%= link_to 'Search', '#', :class => 'nav-link' %>
+        <%= link_to 'いいね', '#', :class => 'nav-link' %>
       </li>
       <li class="nav-item">
-        <%= link_to 'Like', '#', :class => 'nav-link' %>
-      </li>
-      <li class="nav-item">
-        <%= link_to 'Chat', '#', :class => 'nav-link' %>
+        <%= link_to 'チャット', '#', :class => 'nav-link' %>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          My Account
+          マイアカウント
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <%= link_to 'My profile', '#', :class => 'dropdown-item' %>
-          <%= link_to 'Likes from you', '#', :class => 'dropdown-item' %>
-          <%= link_to 'Logout', destroy_user_session_path, method: :delete, :class => 'dropdown-item' %>
+          <%= link_to 'マイプロフィール', user_path(current_user), :class => 'dropdown-item' %>
+          <%= link_to 'プロフィールを変更する', profiles_edit_path(current_user), :class => 'dropdown-item' %>
+          <%= link_to 'あなたからのいいね', '#', :class => 'dropdown-item' %>
+          <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, :class => 'dropdown-item' %>
           <div class="dropdown-divider"></div>
-          <%= link_to 'Setting', '#', :class => 'dropdown-item' %>
+          <%= link_to '設定', '#', :class => 'dropdown-item' %>
         </div>
       </li>
     </ul>
   </div>
 </nav>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-         <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-         <script>
-           $('.dropdown-toggle').dropdown()
-         </script>
+
 </header>

@@ -25,7 +25,3 @@
 //= require jquery-easing/jquery.easing
 //= require turbolinks
 //= require_tree .
-
-$(document).ready(function(){
-    $('.dropdown-toggle').dropdown();
-});

@@ -11,6 +11,16 @@ class User < ApplicationRecord
   
   has_one  :profile, dependent: :destroy
   
+  
+  has_many :from_messages, class_name: "Message",
+            foreign_key: "from_id", dependent: :destroy
+  has_many :to_messages, class_name: "Message",
+            foreign_key: "to_id", dependent: :destroy
+  has_many :sent_messages, through: :from_messages, source: :from
+  has_many :received_messages, through: :to_messages, source: :to
+  
+  
+  
   def following?(other_user)
     following.include?(other_user)
   end  
@@ -22,6 +32,11 @@ class User < ApplicationRecord
   def matchers
     following & followers
   end
+  
+  #Send message to other user
+  def send_message(other_user, room_id, content)
+    from_messages.create!(to_id: other_user.id, room_id: room_id, content: content)
+  end  
   
   def self.find_for_oauth(auth)
     user = User.where(uid: auth.uid, provider: auth.provider).first

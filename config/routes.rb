@@ -16,4 +16,5 @@ Rails.application.routes.draw do
   resources :matching, only: [:index, :show]
   resources :profiles, except: [:edit]
   resources :relationships, only: [:create, :destroy]
+  mount ActionCable.server => '/cable'
 end

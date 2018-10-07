@@ -1,12 +1,17 @@
 class MatchingController < ApplicationController
+  before_action :authenticate_user!, only: [:index, :show]
+  before_action :only_profile_user,  only: [:index, :show]
+  
   def index
-    @users = current_user.matchers
+    @users = User.matching(current_user)
   end
 
   def show
+    session[:user_id] = current_user.id
     @user = User.find(params[:id])
     @room_id = message_room_id(current_user,@user)
     @messages = Message.recent_in_room(@room_id)
+    
   end
   
   private

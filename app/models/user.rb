@@ -1,4 +1,7 @@
 class User < ApplicationRecord
+  scope :matching, -> user_id { joins("INNER JOIN relationships ON relationships.follower_id = users.id
+  INNER JOIN relationships AS r ON relationships.following_id = r.follower_id AND r.following_id = relationships.follower_id").where('relationships.following_id = ?', user_id) }
+  
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,

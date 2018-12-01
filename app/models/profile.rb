@@ -11,10 +11,31 @@ class Profile < ApplicationRecord
     validates :singleword, length: {maximum: 100}
     belongs_to :user
     mount_uploader :image, ImageUploader
-  
+    
+    scope :get_by_username, ->(username) {
+    where("username like ?", "%#{username}%")
+    }
+    # 性別による絞り込み
+    scope :get_by_occpation, ->(occupation) {
+    where(occupation: occupation)
+    }
+    scope :get_by_height1, ->(height1) {
+    where('height >= ?', height1 )
+    }
+    scope :get_by_height2, ->(height2) {
+    where('height <= ?', height2 )
+    }
+    scope :get_by_age1, ->(age1) {
+    where('age >= ?', age1 )
+    }
+    scope :get_by_age2, ->(age2) {
+    where('age <= ?', age2 )
+    }
   
     def calage
       date_format = "%Y%m%d"
       (Date.today.strftime(date_format).to_i - birth.strftime(date_format).to_i) / 10000
     end
+    
+    
 end

@@ -36,6 +36,8 @@ class ProfilesController < ApplicationController
   
   def update
     if @profile.update_attributes(profile_params)
+      @profile.age = @profile.calage
+      @profile.save
       # Success
       flash[:success] = "Profile updated"
       redirect_to root_path

@@ -18,9 +18,9 @@ class RelationshipsController < ApplicationController
   end
 
   def destroy
-    relationship = Relationship.find(params[:id])
-    relationship.destroy
-    redirect_to controller: 'users', action: 'index'
+    user = Relationship.find(params[:id]).following
+    current_user.unfollow(user)
+    redirect_to controller: 'matching', action: 'index'
   end
 
   private

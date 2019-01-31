@@ -32,6 +32,10 @@ class User < ApplicationRecord
     self.active_relationships.create(following_id: other_user.id)
   end
   
+  def unfollow(other_user)
+    self.active_relationships.find_by(following_id: other_user.id).destroy
+  end  
+  
   def matchers
     following & followers
   end

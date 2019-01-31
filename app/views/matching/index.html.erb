@@ -11,13 +11,17 @@
                       <img class="rounded-circle d-flex align-self-center" src="../img/noimage.jpg" alt="avatar">
                     <% end %>
                     <div class="media-body">
-                        <h5 class="mt-2"><%= user.profile.username %> <%= user.profile.age %>歳</h5>
+                        <h4 class="mt-2 ml-1"><%= user.profile.username %> <%= user.profile.age %>歳</h4>
                         <% if user.profile.singleword? %>
-                          <p class="text-dark"><%= truncate(user.profile.singleword, length: 17) %></p>
+                          <h5 class="text-dark ml-2"><%= truncate(user.profile.singleword, length: 17) %></h5>
                         <% end %>
                         <p>
-                            <span class="badge badge-outline badge-sm badge-info badge-pill mt-2"><%= link_to 'チャットを始める', matching_path(user.id), class:"text-info", style:"text-decoration: none" %></span>
-                            <span class="badge badge-outline badge-sm badge-danger badge-pill mt-2"><%= link_to 'マッチングを削除', '#', class:"text-danger", style:"text-decoration: none" %></span>
+                            <span class="mt-2">
+                              <%= link_to 'チャットを始める', matching_path(user.id), class:"btn btn-primary btn-sm", style:"text-decoration: none" %>
+                            </span>
+                            <%= form_for(current_user.active_relationships.find_by(following_id: user.id), html: { method: :delete, class: "mt-2" }) do |f| %>
+                              <%= f.submit 'マッチングを削除', class:"btn btn-primary btn-sm"  %>
+                            <% end %>
                         </p>
                     </div>
                 </li>

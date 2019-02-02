@@ -27,6 +27,14 @@ User.create(email: "aklojp@example.com", password: "redpill")
 @user5.create_profile!(username: "PEPE", sex: :female, birth: "1988-03-20", age: 30,nationality: :taiwan, height: 156, occupation: :estate, singleword: "Like you")
 @user6.create_profile!(username: "Karina", sex: :female, birth: "1968-11-01", age: 49,nationality: :japan, height: 153, occupation: :ca, singleword: "Like you ifsaifi aifasifi faufiaafsai sif iasfi ifasifi aiasfj iajsaif ai")
 
+99.times do |n|
+  name  = Faker::Name.name
+  email = "example-#{n+1}@example.com"
+  password = Faker::Internet.password(8)
+  user = User.create!(email: email, password: password)
+  user.create_profile!(username: name, sex: :female, birth: "1993-11-30", age: 25,nationality: :taiwan, height: 170, occupation: :student, singleword: "Like you")
+end
+
 
 users = User.all
 user  = users.first

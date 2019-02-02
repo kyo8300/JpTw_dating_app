@@ -420,3 +420,16 @@ section.message_box {
     text-align: center;
   }
 }
+
+.kaminaricss{
+  margin: 0 auto;
+}
+
+.page-link{
+  color: hotpink; 
+} 
+
+.page-item.active .page-link{
+  background-color: hotpink;
+  border-color: hotpink;
+}

@@ -3,7 +3,7 @@ class MatchingController < ApplicationController
   before_action :only_profile_user,  only: [:index, :show]
   
   def index
-    @users = User.matching(current_user)
+    @users = User.matching(current_user).page(params[:page]).per(12)
   end
 
   def show

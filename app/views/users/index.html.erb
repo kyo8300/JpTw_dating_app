@@ -48,7 +48,8 @@
               <p class="text-dark"><%= truncate(profile.singleword, length: 17) %></p>
             <% end %>
           <% end %>  
-        </div>    
-        <% end %>    
+        </div>   
+        <% end %>
+        <%= paginate @profiles %>
     </div>
 </div>    

@@ -72,23 +72,24 @@ $(document).on('turbolinks:load', function(){
   function buildHTML(data) {
       var html = `
       <div id="wrap">
-      <div id="left-bg">
-      <img id="left-avatar" class="user_avatar" src="${data.follower_avatar.url}">
-      <div id="left_name" class="user_name">
-      ${data.follower_name}
+        <div id="left-bg">
+          <img id="left-avatar" class="user_avatar" src="${data.follower_avatar.url}">
+          <div id="left_name" class="user_name">
+            ${data.follower_name}
+          </div>
+        </div>
+        
+        <div id="right-bg">
+          <img id="right-avatar" class="user_avatar" src="${data.following_avatar.url}">
+          <br>
+          <div id="right_name" class="user_name">
+            ${data.following_name}
+          </div>
+        </div>
       </div>
-      </div>
-      <div id="right-bg">
-      <img id="right-avatar" class="user_avatar" src="${data.following_avatar.url}">
-      <br>
-      <div id="right_name" class="user_name">
-      ${data.following_name}
-      </div>
-      </div>
-      </div>
-      </div>
+      
       <div id="christmas_message" class="ef">
-      マッチング成功
+        マッチング成功
       </div>
       `
 

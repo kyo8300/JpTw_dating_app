@@ -2,6 +2,10 @@ class RelationshipsController < ApplicationController
   before_action :authenticate_user!, only: [:create,:destroy]
   before_action :only_profile_user,  only: [:create, :destroy]
   
+  def index
+    @users = current_user.following.page(params[:page]).per(10)
+  end
+    
   def create
     @relationship = current_user.active_relationships.new(create_params)
     if @relationship.save

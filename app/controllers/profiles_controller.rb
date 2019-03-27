@@ -18,6 +18,7 @@ class ProfilesController < ApplicationController
     if @profile.save
       if @profile.age < 18
         @profile.destroy
+        current_user.destroy
 =begin
         current_user.destroy
 =end        

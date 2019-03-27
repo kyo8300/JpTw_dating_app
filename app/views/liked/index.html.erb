@@ -3,7 +3,7 @@
     <div class="col">
         <div class="user-widget-2">
             <ul class="list-unstyled">
-              <% if !@users.empty? %>
+               <% if !@users.empty? %>
                 <% @users.each do |user| %>
                 <li class="media border-bottom pb-4">
                     <%= link_to(user_path(user)) do %>
@@ -20,21 +20,12 @@
                         <% if user.profile.singleword? %>
                           <h5 class="text-dark ml-2"><%= truncate(user.profile.singleword, length: 17) %></h5>
                         <% end %>
-                        <p>
-                            <span class="mt-2">
-                              <%= link_to 'チャットを始める', matching_path(user.id), class:"btn btn-primary btn-sm", style:"text-decoration: none" %>
-                            </span>
-                            <%= form_for(current_user.active_relationships.find_by(following_id: user.id), html: { method: :delete, class: "mt-2" }) do |f| %>
-                              <%= f.submit 'マッチングを削除', class:"btn btn-primary btn-sm"  %>
-                            <% end %>
-                        </p>
                     </div>
                 </li>
                 <% end %>
-                <%= paginate @users %>
-              <% else %>
-                <h4>You have not matched yet.</h4>
-              <% end %>
+               <% else %>
+                 <h4>You have not been liked by other people yet.</h4>
+               <% end %>
             </ul>
         </div>
     </div>

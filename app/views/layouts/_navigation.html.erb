@@ -1,6 +1,6 @@
 <header>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <%= link_to 'TAPIOKA', root_path, :class => 'navbar-brand' %>
+  <%= link_to 'TAPIOCA', root_path, :class => 'navbar-brand' %>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -8,25 +8,25 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <%= link_to '検索する', root_path, :class => 'nav-link' %>
+        <%= link_to 'Search', root_path, :class => 'nav-link' %>
       </li>
       <li class="nav-item">
-        <%= link_to 'いいね', '#', :class => 'nav-link' %>
+        <%= link_to 'Like from other people', '/liked', :class => 'nav-link' %>
       </li>
       <li class="nav-item">
-        <%= link_to 'マッチング一覧', matching_index_path, :class => 'nav-link' %>
+        <%= link_to 'Matching List', matching_index_path, :class => 'nav-link' %>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          マイアカウント
+          My Account
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <%= link_to 'マイプロフィール', user_path(current_user), :class => 'dropdown-item' %>
-          <%= link_to 'プロフィールを変更する', profiles_edit_path(current_user), :class => 'dropdown-item' %>
-          <%= link_to 'あなたからのいいね', '#', :class => 'dropdown-item' %>
-          <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, :class => 'dropdown-item' %>
+          <%= link_to 'My Profile', user_path(current_user), :class => 'dropdown-item' %>
+          <%= link_to 'Change My Profile', profiles_edit_path(current_user), :class => 'dropdown-item' %>
+          <%= link_to 'Like From You', relationships_path, :class => 'dropdown-item' %>
+          <%= link_to 'Log Out', destroy_user_session_path, method: :delete, :class => 'dropdown-item' %>
           <div class="dropdown-divider"></div>
-          <%= link_to '設定', '#', :class => 'dropdown-item' %>
+          <%= link_to 'Setting', '#', :class => 'dropdown-item' %>
         </div>
       </li>
     </ul>

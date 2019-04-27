@@ -5,20 +5,25 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-User.create(email: "kametyou777@gmail.com", password: "s0ccerlove")
-User.create(email: "malaysia@example.com", password: "liuliwei")
-User.create(email: "foobar@example.com", password: "2015love")
-User.create(email: "weny@example.com", password: "wenydao")
-User.create(email: "inmyheart@example.com", password: "ellegarden")
-User.create(email: "aklojp@example.com", password: "redpill")
+@user1 = User.new(email: "kametyou777@gmail.com", password: "s0ccerlove")
+@user1.skip_confirmation!
+@user1.save
+@user2 = User.new(email: "malaysia@example.com", password: "liuliwei")
+@user2.skip_confirmation!
+@user2.save
+@user3 = User.new(email: "foobar@example.com", password: "2015love")
+@user3.skip_confirmation!
+@user3.save
+@user4 = User.new(email: "weny@example.com", password: "wenydao")
+@user4.skip_confirmation!
+@user4.save
+@user5 = User.new(email: "inmyheart@example.com", password: "ellegarden")
+@user5.skip_confirmation!
+@user5.save
+@user6 = User.new(email: "aklojp@example.com", password: "redpill")
+@user6.skip_confirmation!
+@user6.save
 
-
-@user1 = User.find(1)
-@user2 = User.find(2)
-@user3 = User.find(3)
-@user4 = User.find(4)
-@user5 = User.find(5)
-@user6 = User.find(6)
 
 @user1.create_profile!(username: "Kyo", sex: :male, birth: "1997-08-30", age: 21,nationality: :japan, height: 165, occupation: :student, singleword: "Like you")
 @user2.create_profile!(username: "Riu", sex: :male, birth: "1998-06-30", age: 20,nationality: :taiwan, height: 179, occupation: :doctor, singleword: "Like you")
@@ -31,7 +36,9 @@ User.create(email: "aklojp@example.com", password: "redpill")
   name  = Faker::Name.name
   email = "example-#{n+1}@example.com"
   password = Faker::Internet.password(8)
-  user = User.create!(email: email, password: password)
+  user = User.new(email: email, password: password)
+  user.skip_confirmation!
+  user.save
   user.create_profile!(username: name, sex: :female, birth: "1993-11-30", age: 25,nationality: :taiwan, height: 170, occupation: :student, singleword: "Like you")
 end
 

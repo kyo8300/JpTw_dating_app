@@ -45,20 +45,30 @@ class User < ApplicationRecord
     from_messages.create!(to_id: other_user.id, room_id: room_id, content: content)
   end  
   
+  #Facebook and Google
   def self.find_for_oauth(auth)
     user = User.where(uid: auth.uid, provider: auth.provider).first
  
     unless user
-      user = User.create(
+      user = User.new(
         uid:      auth.uid,
         provider: auth.provider,
-        email:    auth.info.email,
+        email:    User.dummy_email(auth),
         password: Devise.friendly_token[0, 20]
       )
+      user.skip_confirmation!
+      user.save
     end
  
     user
   end
+  
+  
+  private
+    
+    def self.dummy_email(auth)
+      "#{auth.uid}-#{auth.provider}@example.com"
+    end  
   
 end
 

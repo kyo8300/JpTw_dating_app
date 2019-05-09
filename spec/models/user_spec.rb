@@ -1,18 +1,39 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  it { is_expected.to validate_presence_of :email }
-  
-  it { is_expected.to validate_presence_of :password }
-  
-  it { should validate_length_of(:password).is_at_least(6) }
-  
-  it "is case insensitive" do
-      user = User.create(
-          email: "EXamPLe@example.com"
-      )
-      expect(user.email).to eq "example@example.com"
+  describe "validation tests of user model" do
+    it { is_expected.to validate_presence_of :email }
+    
+    it { is_expected.to validate_presence_of :password }
+    
+    it { should validate_length_of(:password).is_at_least(6) }
+    
+    it "is case insensitive" do
+        user = User.create(
+            email: "EXamPLe@example.com"
+        )
+        expect(user.email).to eq "example@example.com"
+    end
   end
   
   #mailer, follow, match, auth
+  describe "following methods" do
+    let(:user1) {FactoryBot.create(:user)}
+    let(:user2) {FactoryBot.create(:user)}
+    
+    it "can follow a user" do
+      expect(user1.following?(user2)).to be_falsy
+      user1.follow(user2)
+      expect(user1.following?(user2)).to be_truthy
+    end
+    
+    it "can unfollow a user" do
+      user1.follow(user2)
+      expect(user1.following?(user2)).to be_truthy
+      user1.unfollow(user2)
+      expect(user1.following?(user2)).to be_falsy
+    end
+    
+  end
+  
 end

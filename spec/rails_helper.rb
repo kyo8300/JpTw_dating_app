@@ -64,8 +64,16 @@ RSpec.configure do |config|
   config.include Devise::Test::ControllerHelpers, type: :controller
   #config.include RequestSpecHelper, type: :request
   config.include Devise::Test::IntegrationHelpers, type: :system
-
+  
+  #delete uploaded picture
+  config.after(:all) do
+    if Rails.env.test?
+      FileUtils.rm_rf(Dir["#{Rails.root}/spec/test_uploads/"])
+    end
+  end
+  
 end
+
 Shoulda::Matchers.configure do |config|
   config.integrate do |with|
     with.test_framework :rspec

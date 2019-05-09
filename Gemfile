@@ -26,6 +26,10 @@ gem 'dotenv-rails'
 group :development, :test do
   gem 'sqlite3', '1.3.13'
   gem 'byebug',  '9.0.6', platform: :mri
+  gem 'rspec-rails', '~> 3.8', '>= 3.8.2'
+  gem 'factory_bot_rails', '~> 5.0', '>= 5.0.2'
+  #gem 'factory_bot', '~> 5.0', '>= 5.0.2' #!!!
+  gem 'rails-controller-testing', '~> 1.0', '>= 1.0.4' #!!
 end
 
 group :development do
@@ -36,10 +40,15 @@ group :development do
 end
 
 group :test do
-  gem 'rails-controller-testing', '1.0.2'
-  gem 'minitest-reporters',       '1.1.14'
-  gem 'guard',                    '2.14.1'
-  gem 'guard-minitest',           '2.4.6'
+  gem 'capybara', '~> 3.18'
+  gem 'launchy', '~> 2.4', '>= 2.4.3'
+  gem 'webdrivers'
+  gem 'shoulda-matchers',
+    git: 'https://github.com/thoughtbot/shoulda-matchers.git',
+    branch: 'rails-5'
+  #gem 'minitest-reporters',       '1.1.14'
+  #gem 'guard',                    '2.14.1'
+  #gem 'guard-minitest',           '2.4.6'
 end
 
 group :production do
@@ -47,5 +56,5 @@ group :production do
   gem 'fog',  '1.42'
 end
 
-# Windows環境ではtzinfo-dataというgemを含める必要があります
+
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

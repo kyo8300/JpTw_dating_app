@@ -15,13 +15,5 @@
 //= require popper
 //= require bootstrap
 //= require like.js
-//= require jquery.lettering.js
-//= require jquery.textillate.js
-//= require js/creative
-//= require js/creative.min
-//= require js/jquery.magnific-popup
-//= require scrollreveal/scrollreveal
-//= require jquery-easing/jquery.easing.compatibility
-//= require jquery-easing/jquery.easing
 //= require turbolinks
 //= require_tree .

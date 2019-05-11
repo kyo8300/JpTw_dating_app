@@ -3,7 +3,6 @@
   <p class="<%= message.id %> px-2 mb-1" id="message_sender" ><%= user.profile.username %></p>
   <p class="<%= message.id %> p-3 border rounded received" id="message_content"><%= message.content %></p>
   
-  
   <script type="text/javascript">
     var from_id = <%= message.from_id %>;
     var current_user_id = $('.message').data('session');
@@ -15,6 +14,6 @@
       $('p.' + <%= message.id %>).css('text-align', 'left');
       $('p.' + <%= message.id %>).css('margin-right', 'auto');
     }
-    
   </script>
+
 </div>

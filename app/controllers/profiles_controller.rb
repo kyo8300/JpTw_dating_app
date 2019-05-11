@@ -19,9 +19,6 @@ class ProfilesController < ApplicationController
       if @profile.age < 18
         @profile.destroy
         current_user.destroy
-=begin
-        current_user.destroy
-=end        
         redirect_to pages_loginpage_path , notice: "only more than 18 years old users can use this app."
       else
         @profile.save

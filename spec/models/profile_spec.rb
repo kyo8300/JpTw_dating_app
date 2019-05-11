@@ -25,25 +25,25 @@ RSpec.describe Profile, type: :model do
     
     let!(:profile1) {Profile.create(
       username: "kyo",
-      sex: 1,
+      sex: "male",
       birth: "1997-8-30",
       age: 21,
       #nationality: 0 = Japan
-      nationality: 0,
+      nationality: "japan",
       height: 170,
-      occupation: 0,
+      occupation: "student",
       user: user1,
     )}
     
     let!(:profile2) {Profile.create(
       username: "yang ju",
-      sex: 0,
+      sex: "female",
       birth: "1996-10-30",
       age: 22,
       #nationality: 1 = Taiwan
-      nationality: 1,
+      nationality: "taiwan",
       height: 160,
-      occupation: 0,
+      occupation: "student",
       user: user2,
     )}
     
@@ -83,13 +83,13 @@ RSpec.describe Profile, type: :model do
     let(:image) { Rack::Test::UploadedFile.new(image_path) }
     let!(:profile1) {Profile.create(
       username: "kyo",
-      sex: 1,
+      sex: "male",
       birth: "1997-8-30",
       age: 21,
       #nationality: 0 = Japan
-      nationality: 0,
+      nationality: "japan",
       height: 170,
-      occupation: 0,
+      occupation: "student",
       image: image,
       user: user1,
     )}

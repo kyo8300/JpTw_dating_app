@@ -11,5 +11,9 @@ FactoryBot.define do
     trait :underage do
       birth {"2005-05-11"}
     end
+    
+    trait :female do
+      sex {"female"}
+    end
   end
 end

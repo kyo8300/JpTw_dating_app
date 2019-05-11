@@ -1,6 +1,6 @@
 class RelationshipsController < ApplicationController
-  before_action :authenticate_user!, only: [:create,:destroy]
-  before_action :only_profile_user,  only: [:create, :destroy]
+  before_action :authenticate_user!, only: [:index, :create, :destroy]
+  before_action :only_profile_user,  only: [:index, :create, :destroy]
   
   def index
     @users = current_user.following.page(params[:page]).per(10)

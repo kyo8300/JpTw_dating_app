@@ -13,9 +13,11 @@ RSpec.describe User, type: :model do
     it { should validate_length_of(:password).is_at_least(6) }
     
     it "is case insensitive" do
-        user = User.create(
+        user = User.new(
             email: "EXamPLe@example.com"
         )
+        user.skip_confirmation!
+        user.save
         expect(user.email).to eq "example@example.com"
     end
   end

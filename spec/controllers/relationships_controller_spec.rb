@@ -9,7 +9,7 @@ RSpec.describe RelationshipsController, type: :controller do
     end
     
     describe "#create" do
-        describe "an unauthorized user" do
+        context "as a guest" do
             it "should require logged-in user when create" do
                 expect{
                     post :create, format: :json, params: { following_id: @user2.id }
@@ -22,7 +22,7 @@ RSpec.describe RelationshipsController, type: :controller do
             end
         end
         
-        describe "logged in user" do
+        context "logged in user" do
             it "creates relationship when a user is logged in" do
                 sign_in @user1
                 expect{

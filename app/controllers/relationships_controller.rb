@@ -3,7 +3,8 @@ class RelationshipsController < ApplicationController
   before_action :only_profile_user,  only: [:index, :create, :destroy]
   
   def index
-    @users = current_user.following.page(params[:page]).per(10)
+     non_matchers = current_user.following - current_user.matchers
+     @users = Kaminari.paginate_array(non_matchers).page(params[:page]).per(10)
   end
     
   def create

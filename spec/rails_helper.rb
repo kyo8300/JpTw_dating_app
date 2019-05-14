@@ -8,6 +8,10 @@ require 'rspec/rails'
 # Add additional requires below this line. Rails is not loaded until this point!
 require 'capybara/rspec'
 require 'carrierwave/test/matchers'
+
+#OmniAuth
+OmniAuth.config.test_mode = true
+
 # Requires supporting ruby files with custom matchers and macros, etc, in
 # spec/support/ and its subdirectories. Files matching `spec/**/*_spec.rb` are
 # run as spec files by default. This means that files in spec/support that end
@@ -71,6 +75,9 @@ RSpec.configure do |config|
       FileUtils.rm_rf(Dir["#{Rails.root}/spec/test_uploads/"])
     end
   end
+  
+  #rspec/support/omniauth_mocks.rb
+  config.include OmniauthMocks
   
 end
 

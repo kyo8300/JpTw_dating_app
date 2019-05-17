@@ -11,7 +11,6 @@ class MatchingController < ApplicationController
     @user = User.find(params[:id])
     @room_id = message_room_id(current_user,@user)
     @messages = Message.recent_in_room(@room_id)
-    
   end
   
   private

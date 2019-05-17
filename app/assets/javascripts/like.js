@@ -89,7 +89,7 @@ $(document).on('turbolinks:load', function(){
       </div>
       
       <div id="christmas_message" class="ef">
-        マッチング成功
+        You are matched!
       </div>
       `
 

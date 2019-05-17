@@ -9,13 +9,13 @@
                     <%= link_to(user_path(user)) do %>
                       <% if user.profile.image? %>
                         <%= image_tag user.profile.image.thumb.url, :class => "rounded-circle d-flex align-self-center" %>
-                      <% else %>  
+                      <% else %>
                         <img class="rounded-circle d-flex align-self-center" src="../img/noimage.jpg" alt="avatar">
                       <% end %>
                     <% end %>
                     <div class="media-body">
                         <%= link_to(user_path(user), style:'text-decoration: none') do %>
-                          <h4 class="mt-2 ml-1"><%= user.profile.username %> <%= user.profile.age %>歳</h4>
+                          <h4 class="mt-2 ml-1"><%= user.profile.username %> <%= user.profile.age %> y.o</h4>
                         <% end %>
                         <% if user.profile.singleword? %>
                           <h5 class="text-dark ml-2"><%= truncate(user.profile.singleword, length: 17) %></h5>

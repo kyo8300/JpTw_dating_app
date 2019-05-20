@@ -1,11 +1,7 @@
 Rails.application.routes.draw do
   
-
-  get 'liked/index'
-
   devise_for :users, controllers: {omniauth_callbacks: 'users/omniauth_callbacks'}
   get 'pages/loginpage'
-  get 'profiles/edit'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root 'users#index'
   
@@ -16,7 +12,7 @@ Rails.application.routes.draw do
   end
   
   resources :matching, only: [:index, :show]
-  resources :profiles, except: [:edit]
+  resources :profiles
   resources :relationships, only: [:index ,:create, :destroy]
   resources :liked, only: [:index]
   mount ActionCable.server => '/cable'

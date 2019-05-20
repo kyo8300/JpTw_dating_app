@@ -1,0 +1,54 @@
+ja:
+  attributes:
+    username: 'ユーザーネーム'
+    sex: '性別'
+    birth: '生年月日'
+    age: '年齢'
+    nationality: '国籍'
+    height: '身長'
+    occupation: '職業'
+    singleword: 'ひとこと'
+  enums:
+    profile:
+      sex:
+        female: '女性'
+        male: '男性'
+      nationality:
+        japan: "日本"
+        taiwan: "台湾"
+      occupation:
+        student: "学生"
+        doctor: "医者"
+        accountant: "会計士" 
+        financial: "金融機関"
+        agriculture: "農業"
+        computer: "コンピュータ関連"
+        architecture: "建築関連"
+        consaltant: "コンサルタント"
+        nurse: "看護師"
+        manager: "マネージャー"
+        publicworker: "公務員"
+        sports: "スポーツ関連"
+        entertainer: "エンターテイナー"
+        writer: "ライター"
+        designer: "デザイナー"
+        education: "教育関連"
+        food: "食品関連"
+        receptionist: "受付業務"
+        government: "政府機関"
+        pharmacy: "薬剤師"
+        pilot: "パイロット"
+        lawyer: "弁護士"
+        ca: "客室乗務員"
+        media: "メディア関連"
+        tourisum: "観光業"
+        service: "サービス関連"
+        estate: "不動産業"
+        welfare: "福祉関連"
+        secretary: "秘書"
+        beauty: "美容関連"
+        trading: "商社"
+        enterprise: "事業家"
+        transit: "輸送業"
+        ceo: "CEO"
+        other: "その他"

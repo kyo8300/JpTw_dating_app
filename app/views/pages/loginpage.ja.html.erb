@@ -1,0 +1,107 @@
+<body id="page-top">
+
+    <header class="masthead text-center text-white d-flex">
+      <div class="container my-auto">
+        <div class="row">
+          <div class="col-lg-10 mx-auto">
+            <h1 class="text-uppercase">
+              <strong>Tapiocaへようこそ!</strong>
+            </h1>
+            <hr>
+          </div>
+          <div class="col-lg-8 mx-auto">
+            <p class="text-faded mb-5">このウェブサイトは日本人と台湾人が互いに友好な関係を築く場を設けるために作られました。タピオカは多くの台湾人と日本人に愛されている食べ物です。 私たちはそこからこのサイトの名前をタピオカにしました。さあ使ってみましょう！</p>
+            <%= link_to 'サインイン', new_user_registration_path , :class => "btn btn-primary btn-xl js-scroll-trigger mr-3" %>
+            <%= link_to 'ログイン' ,new_user_session_path, :class => "btn btn-primary btn-xl js-scroll-trigger ml-3" %>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="bg-primary" id="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto text-center">
+            <h2 class="section-heading text-white">初めてみましょう！</h2>
+            <hr class="light my-4">
+            <p class="text-faded mb-4">もしあなたが今使い始めたら、きっと多くの素晴らしい出会いがまっているでしょう。さあためらう理由はもうありません！</p>
+            <%= link_to 'サインアップ', new_user_registration_path , :class => "btn btn-light btn-xl js-scroll-trigger" %>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading">私たちがあなたに提供すること</h2>
+            <hr class="my-4">
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 text-center">
+            <div class="service-box mt-5 mx-auto">
+              <i class="fa fa-4x fa-diamond text-primary mb-3 sr-icons"></i>
+              <h3 class="mb-3">頑丈なウェブサイト</h3>
+              <p class="text-muted mb-0">私たちのウェブサイトは定期的にアップデートされます。そのため使えなくなるようなことはありません。</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 text-center">
+            <div class="service-box mt-5 mx-auto">
+              <i class="fa fa-4x fa-paper-plane text-primary mb-3 sr-icons"></i>
+              <h3 class="mb-3">チャット機能</h3>
+              <p class="text-muted mb-0">あなたはマッチングしたユーザーとチャットすることが可能です！</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 text-center">
+            <div class="service-box mt-5 mx-auto">
+              <i class="fa fa-4x fa-newspaper-o text-primary mb-3 sr-icons"></i>
+              <h3 class="mb-3">アップデート</h3>
+              <p class="text-muted mb-0">物事をフレッシュに保つため常に依存関係をアップデートします。</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 text-center">
+            <div class="service-box mt-5 mx-auto">
+              <i class="fa fa-4x fa-heart text-primary mb-3 sr-icons"></i>
+              <h3 class="mb-3">良い友好関係を築く</h3>
+              <p class="text-muted mb-0">このサイトを利用した後きっと多くの友達がいることでしょう!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-dark text-white">
+      <div class="container text-center">
+        <h2 class="mb-4">始めてみましょう!</h2>
+        <%= link_to 'サインアップ!', new_user_registration_path , :class => "btn btn-light btn-xl sr-button" %>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto text-center">
+            <h2 class="section-heading">連絡しましょう!</h2>
+            <hr class="my-4">
+            <p class="mb-5">このサイトを始める準備は出来ましたか？グレート！私たちに是非電話もしくはメールを送ってください。私たちはできる限り早く返信します！</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 ml-auto text-center">
+            <i class="fa fa-phone fa-3x mb-3 sr-contact"></i>
+            <p>123-456-6789</p>
+          </div>
+          <div class="col-lg-4 mr-auto text-center">
+            <i class="fa fa-envelope-o fa-3x mb-3 sr-contact"></i>
+            <p>
+              <a href="mailto:your-email@your-domain.com">example@example.com</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+</body>

@@ -1,0 +1,11 @@
+ja:
+  navigation:
+    search: '検索'
+    like_from: '他のユーザーからのいいね'
+    list: 'マッチングリスト'
+    myaccount: 'アカウント'
+    myprofile: 'プロフィール'
+    changeprofile: 'プロフィールを変更する'
+    like_to: 'いいねしたユーザー'
+    logout: 'ログアウトする'
+    setting: '設定'

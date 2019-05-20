@@ -12,6 +12,12 @@ module JTDatingApp
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
+    I18n.available_locales = %i(ja en zh)
+    I18n.enforce_available_locales = true
+    I18n.default_locale = :en
+    
+    config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}').to_s]
+    
     
     config.generators do |g|
       g.test_framework :rspec,

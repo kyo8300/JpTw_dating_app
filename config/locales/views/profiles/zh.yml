@@ -1,0 +1,18 @@
+zh:
+  profiles:
+    new:
+      theme: '個人檔案'
+      photo: '上傳照片...'
+      account: '確定'
+    edit:
+      theme: '個人檔案'
+      photo: '更新照片...'
+      editting: '編輯個人檔案'
+    
+    username: '名字:'
+    gender: '性別:'
+    birth: '生日:'
+    nationality: '國籍:'
+    height: '身高:'
+    occupation: '職業:'
+    singleword: '個性簽名:'

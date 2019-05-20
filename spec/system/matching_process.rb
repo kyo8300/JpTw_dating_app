@@ -29,10 +29,10 @@ RSpec.describe "Matching", type: :system do
     click_link "Keji 20歳"
     
     click_button "Like"
-    expect(page).have_content "You are matched!"
+    expect(page).to have_content "You are matched!"
     visit current_path
     
-    expect(page).have_content "Already matched"
+    expect(page).to have_content "Already matched"
   end
   
 end

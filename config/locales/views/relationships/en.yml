@@ -1,0 +1,5 @@
+en:
+  relationships:
+    index:
+      age: 'y.o'
+      messsage: 'You have not liked other people yet.'

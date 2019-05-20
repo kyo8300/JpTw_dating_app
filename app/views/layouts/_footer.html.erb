@@ -1,5 +1,16 @@
 <footer>
       <div class="container">
+        <div class="dropdown mb-4">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Languages
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <%= link_to('English', url_for(locale: 'en'), :class => 'dropdown-item') %>
+            <%= link_to('日本語', url_for(locale: 'ja'), :class => 'dropdown-item') %>
+            <%= link_to('中文', url_for(locale: 'zh'), :class => 'dropdown-item') %>
+          </div>
+        </div>
+        
         <p class="text-white">&copy; My Website 2019. All Rights Reserved.</p>
         <ul class="list-inline">
           <li class="list-inline-item">
@@ -13,4 +24,6 @@
           </li>
         </ul>
       </div>
+      
+      
 </footer>

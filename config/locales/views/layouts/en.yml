@@ -1,0 +1,11 @@
+en:
+  navigation:
+    search: 'Search'
+    like_from: 'Like from other people'
+    list: 'Matching List'
+    myaccount: 'My Account'
+    myprofile: 'My Profile'
+    changeprofile: 'Change My Profile'
+    like_to: 'Like From You'
+    logout: 'Log Out'
+    setting: 'Setting'

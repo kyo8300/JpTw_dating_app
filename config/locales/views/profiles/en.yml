@@ -1,0 +1,18 @@
+en:
+  profiles:
+    new:
+      theme: 'Setting my profile'
+      photo: 'Upload a photo...'
+      account: 'Create profile'
+    edit:
+      theme: 'Setting my profile'
+      photo: 'Change a photo...'
+      editting: 'Edit profile'
+      
+    username: 'Username:'
+    gender: 'Gender:'
+    birth: 'Birth:'
+    nationality: 'Nationality:'
+    height: 'Height:'
+    occupation: 'Occupation:'
+    singleword: 'Singleword:'

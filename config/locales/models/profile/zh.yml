@@ -1,0 +1,54 @@
+zh:
+  attributes:
+    username: '名字'
+    sex: '性別'
+    birth: '生日'
+    age: '年齡'
+    nationality: '國籍'
+    height: '身高'
+    occupation: '職業'
+    singleword: '個人簽名'
+  enums:
+    profile:
+      sex:
+        female: "女性"
+        male: "男性"
+      nationality:
+        japan: "日本"
+        taiwan: "台灣"
+      occupation:
+        student: "學生"
+        doctor: "醫生"
+        accountant: "會計師" 
+        financial: "金融業"
+        agriculture: "農業"
+        computer: "電腦相關"
+        architecture: "建築業"
+        consaltant: "顧問"
+        nurse: "護士"
+        manager: "管理員"
+        publicworker: "公務人員"
+        sports: "運動相關"
+        entertainer: "演藝者"
+        writer: "作家"
+        designer: "設計師"
+        education: "教育業"
+        food: "食品業"
+        receptionist: "接待員"
+        government: "政府機關"
+        pharmacy: "藥劑者"
+        pilot: "飛行員"
+        lawyer: "律師"
+        ca: "CA"
+        media: "媒體"
+        tourisum: "觀光業"
+        service: "服務業"
+        estate: "不動產業"
+        welfare: "福祉業"
+        secretary: "秘書"
+        beauty: "美容相關"
+        trading: "貿易業"
+        enterprise: "事業者"
+        transit: "運輸者"
+        ceo: "CEO"
+        other: "其他的"  

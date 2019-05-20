@@ -1,0 +1,16 @@
+ja:
+  users:
+    index:
+      search: '検索'
+      client: 'ユーザー一覧'
+      username: 'ユーザーネーム:'
+      height: '身長:'
+      age: '年齢:'
+      occupation: '職業:'
+    show:
+      age: '歳'
+      matched: 'マッチングしています'
+      liked: 'いいねしています'
+      change: 'プロフィールを変更する'
+    follow:
+      like: 'いいね'  

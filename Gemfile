@@ -13,6 +13,8 @@ gem 'jquery-rails',            '4.3.1'
 gem 'turbolinks',              '5.0.1'
 gem 'jbuilder',                '2.7.0'
 gem 'devise'
+gem 'devise-i18n'
+gem 'devise-i18n-views'
 gem "font-awesome-rails"
 gem 'popper_js', '~> 1.14.3'
 gem 'omniauth'
@@ -21,6 +23,7 @@ gem 'omniauth-google-oauth2'
 gem 'kaminari'
 gem 'kaminari-bootstrap'
 gem 'dotenv-rails'
+gem 'enum_help'
 
 
 group :development, :test do

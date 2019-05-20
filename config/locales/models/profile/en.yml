@@ -1,0 +1,54 @@
+en:
+  attributes:
+    username: 'username'
+    sex: 'sex'
+    birth: 'birth'
+    age: 'age'
+    nationality: 'nationality'
+    height: 'height'
+    occupation: 'occupation'
+    singleword: 'singleword'
+  enums:
+    profile:
+      sex:
+        female: "Female"
+        male: "Male"
+      nationality:
+        japan: "Japan"
+        taiwan: "Taiwan"
+      occupation:
+        student: "Student"
+        doctor: "Doctor"
+        accountant: "Accountant" 
+        financial: "Financial"
+        agriculture: "Agriculture"
+        computer: "Computer"
+        architecture: "Achitecture"
+        consaltant: "Consaltant"
+        nurse: "Nurse"
+        manager: "Manager"
+        publicworker: "Public worker"
+        sports: "Sports"
+        entertainer: "Entertainer"
+        writer: "Writer"
+        designer: "Designer"
+        education: "Education"
+        food: "Food"
+        receptionist: "Receptionist"
+        government: "Government"
+        pharmacy: "Pharmacist"
+        pilot: "Pilot"
+        lawyer: "Lawyer"
+        ca: "CA"
+        media: "Media"
+        tourisum: "Tourisum"
+        service: "Service"
+        estate: "Estate"
+        welfare: "Welfare"
+        secretary: "Secretary"
+        beauty: "Beauty"
+        trading: "Trading"
+        enterprise: "Enterprise"
+        transit: "Transit"
+        ceo: "CEO"
+        other: "Other"

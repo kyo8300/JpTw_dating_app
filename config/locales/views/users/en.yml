@@ -1,0 +1,16 @@
+en:
+  users:
+    index:
+      search: 'Search'
+      client: 'Users'
+      username: 'Name:'
+      height: 'Height:'
+      age: 'Age:'
+      occupation: 'Occupation:'
+    show:
+      age: 'y.o'
+      matched: 'Already matched'
+      liked: 'Already liked'
+      change: 'Change my profile'
+    follow:
+      like: 'Like'

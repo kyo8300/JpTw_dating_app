@@ -15,7 +15,7 @@
                     <% end %>
                     <div class="media-body">
                         <%= link_to(user_path(user), style:'text-decoration: none') do %>
-                          <h4 class="mt-2 ml-1"><%= user.profile.username %> <%= user.profile.age %> y.o</h4>
+                          <h4 class="mt-2 ml-1"><%= user.profile.username %> <%= user.profile.age %> <%= t '.age' %></h4>
                         <% end %>
                         <% if user.profile.singleword? %>
                           <h5 class="text-dark ml-2"><%= truncate(user.profile.singleword, length: 17) %></h5>
@@ -24,7 +24,7 @@
                 </li>
                 <% end %>
                <% else %>
-                 <h4>You have not been liked by other people yet.</h4>
+                 <h4><%= t '.not_matched' %></h4>
                <% end %>
             </ul>
         </div>

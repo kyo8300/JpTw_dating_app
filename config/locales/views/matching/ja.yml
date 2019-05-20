@@ -1,0 +1,7 @@
+ja:
+  matching:
+    index:
+      age: '歳'
+      not_matched: 'まだ他のユーザーとマッチングしていません。'
+      chatting: 'チャットをする'
+      delete_matching: 'マッチングを削除する'

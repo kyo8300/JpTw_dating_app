@@ -1,0 +1,5 @@
+en:
+  liked:
+    index:
+      age: 'y.o'
+      not_matched: 'You have not been liked by other people yet.'

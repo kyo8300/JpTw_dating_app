@@ -11,7 +11,7 @@ RSpec.describe "Sign up and create profile", type: :system do
       fill_in "Email", with: "example@example.com"
       fill_in "Password", with: "Testuser"
       fill_in "Password confirmation", with: "Testuser"
-      click_button "Sign in"
+      click_button "Confirm"
 
       aggregate_failures do
         expect(page).to have_content "A message with a confirmation link has been sent to your email address. Please follow the link to activate your account."
@@ -38,13 +38,13 @@ RSpec.describe "Sign up and create profile", type: :system do
     expect {
       attach_file "profile[image]", "#{Rails.root}/spec/files/sample_avatar.png"
       fill_in "Username", with: "Test user"
-      select "male", from: "Gender"
+      select "Male", from: "Gender"
       fill_in "Birth", with: "1988/01/01"
-      select "japan", from: "Nationality"
+      select "Japan", from: "Nationality"
       fill_in "Height", with: "180"
-      select "student", from: "Occupation"
+      select "Student", from: "Occupation"
       fill_in "Singleword", with: "Hellow world"
-      click_button "Create account"
+      click_button "Create profile"
 
       aggregate_failures do
         expect(page).to have_content "created profile successfully"

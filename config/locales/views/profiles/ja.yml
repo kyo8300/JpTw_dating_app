@@ -1,0 +1,18 @@
+ja:
+  profiles:
+    new:
+      theme: 'プロフィールの設定'
+      photo: '画像のアップロード...'
+      account: 'プロフィールを作成する'
+    edit:
+      theme: 'プロフィールの設定'
+      photo: '画像の変更...'
+      editting: 'プロフィールを変更する'
+      
+    username: 'ユーザーネーム:'
+    gender: '性別:'
+    birth: '生年月日:'
+    nationality: '国籍:'
+    height: '身長:'
+    occupation: '職業:'
+    singleword: 'ひとこと:'

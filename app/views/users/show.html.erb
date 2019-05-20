@@ -14,7 +14,7 @@
                 <div class="card-body text-center">
                     <!-- user name -->
                     <h3 class="card-title mb-3"><%= @user.profile.username %></h3>
-                    <h5 class="card-title"><%= @user.profile.age %>歳</h5>
+                    <h5 class="card-title"><%= @user.profile.age %> <%= t 'users.show.age' %></h5>
                     <div class="mb-2">
                       <% if @user.profile.height? %>
                         <div class="user-height my-4">
@@ -23,7 +23,7 @@
                       <% end %>
                       <% if @user.profile.occupation? %>
                         <div class="user-occupation">
-                          <i class="fa fa-briefcase fa-2x" aria-hidden="true"></i><h5><%= @user.profile.occupation %></h5>
+                          <i class="fa fa-briefcase fa-2x" aria-hidden="true"></i><h5><%= @user.profile.occupation_i18n %></h5>
                         </div>
                       <% end %>
                     </div>
@@ -38,9 +38,9 @@
                     　   <div id="follow_form">
                           <% if current_user.following?(@user) %>
                             <% if current_user.following?(@user) && @user.following?(current_user) %>
-                              <div id="liked" class="btn btn-primary">Already matched</div>
+                              <div id="liked" class="btn btn-primary"><%= t 'users.show.matched' %></div>
                             <% else %>
-                              <div id="liked" class="btn btn-primary">Already liked</div>
+                              <div id="liked" class="btn btn-primary"><%= t 'users.show.liked' %></div>
                             <% end %>
                           <% else %>
                             <%= render 'follow', {relationship: @relationship} %>
@@ -48,7 +48,7 @@
                         </div>
                       <% end %>
                     <% else %>
-                      <%= link_to 'Change my profile', profiles_edit_path(current_user), class:'btn btn-primary my-4' %>
+                      <%= link_to t('users.show.change'), edit_profile_path(current_user), class:'btn btn-primary my-4' %>
                     <% end %>
 
                 </div>

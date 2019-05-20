@@ -31,3 +31,8 @@
 
 en:
   hello: "Hello world"
+  my:
+    new:
+      login: "Log in"
+      signup: "Sign up"
+      confirm: "Confirm"

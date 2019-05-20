@@ -1,0 +1,7 @@
+zh:
+  matching:
+    index:
+      age: '歲'
+      not_matched: '目前還沒跟別人搭對。'
+      chatting: '聊天'
+      delete_matching: '刪除配對'

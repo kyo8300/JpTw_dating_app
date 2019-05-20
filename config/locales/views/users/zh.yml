@@ -1,0 +1,16 @@
+zh:
+  users:
+    index:
+      search: '搜尋'
+      client: '用戶'
+      username: '名字:'
+      height: '身高:'
+      age: '年齡:'
+      occupation: '職業:'
+    show:
+      age: '歲'
+      matched: '已配對'
+      liked: '已按讚'
+      change: '編輯個人檔案'
+    follow:
+      like: '讚'

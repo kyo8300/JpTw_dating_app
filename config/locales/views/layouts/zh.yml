@@ -1,0 +1,11 @@
+zh:
+  navigation:
+    search: '搜尋'
+    like_from: '從別人給您的讚'
+    list: '配對名單'
+    myaccount: '我的帳號'
+    myprofile: '個人檔案'
+    changeprofile: '修改個人檔案'
+    like_to: '您的讚'
+    logout: '登出'
+    setting: '設定'

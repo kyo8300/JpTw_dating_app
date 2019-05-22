@@ -514,7 +514,7 @@ DEPENDENCIES
   omniauth
   omniauth-facebook
   omniauth-google-oauth2
-  pg (= 0.20.0)
+  pg
   popper_js (~> 1.14.3)
   puma (= 3.9.1)
   rails (= 5.1.4)

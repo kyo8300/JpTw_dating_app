@@ -67,15 +67,16 @@ Rails.application.configure do
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
   # config.action_mailer.raise_delivery_errors = false
   
-  config.action_mailer.default_url_options = { :host => 'tapioca-app.herokuapp.com' }
+  config.action_mailer.default_url_options = { :host => 'https://tapioca-app.herokuapp.com' }
   # Don't care if the mailer can't send.
-  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.raise_delivery_errors = false
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    :address => 'smtp.gmail.com',
     :port => 587,
-    :user_name => ENV['USERNAME'],
-    :password => ENV['PASSWORD'],
+    :user_name => ENV['SENDGRID_USERNAME'],
+    :password => ENV['SENDGRID_PASSWORD'],
+    :domain => "heroku.com",
+    :address => "smtp.sendgrid.net",
     :authentication => :plain,
     :enable_starttls_auto => true
   }

@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+ruby '2.5.1'
+
 gem 'rails',                   '5.1.4'
 gem 'faker',                   '1.7.3'
 gem 'carrierwave',             '1.2.2'

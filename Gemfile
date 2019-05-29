@@ -6,7 +6,7 @@ gem 'carrierwave',             '1.2.2'
 gem 'mini_magick',             '4.7.0'
 gem 'bootstrap',               '~> 4.1.1'
 gem 'puma',                    '3.9.1'
-gem 'sass-rails',              '5.0.6'
+gem 'sassc-rails'
 gem 'uglifier',                '3.2.0'
 gem 'coffee-rails',            '4.2.2'
 gem 'jquery-rails',            '4.3.1'
@@ -55,7 +55,7 @@ group :test do
 end
 
 group :production do
-  gem 'pg'
+  gem 'pg', '~> 0.20'
   gem 'fog',  '1.42'
 end
 

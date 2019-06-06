@@ -37,9 +37,9 @@
         </div>
         <% @profiles.each do |profile| %>
         <div class="col-lg-4 col-sm-6 text-center mb-4">
-          <%= link_to(user_path(profile.user_id), style:'text-decoration: none') do %>
+          <%= link_to(user_path(profile), style:'text-decoration: none') do %>
             <% if profile.image? %>
-              <%= image_tag profile.image.thumb.url, :class => "rounded-circle img-fluid d-block mx-auto mb-2" %>
+              <%= image_tag profile.image.url , size:'200x200', :class => "rounded-circle img-fluid d-block mx-auto mb-2" %>
             <% else %>  
               <img class="rounded-circle img-fluid d-block mx-auto mb-2" src="../img/noimage.jpg" alt="avatar">
             <% end %>

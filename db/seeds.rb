@@ -25,7 +25,7 @@
 @user6.save
 
 
-@user1.create_profile!(username: "Mike", sex: :male, birth: "1997-08-30", age: 21,nationality: :japan, height: 165, occupation: :student, singleword: "Hello", user_id: @user1.id, image: open("#{Rails.root}/public/img/man.jpg"))
+@user1.create_profile!(username: "Mike", sex: :male, birth: "1997-08-30", age: 21,nationality: :japan, height: 165, occupation: :student, singleword: "Hello", user_id: @user1.id, image: open("#{Rails.root}/public/img/s_male.jpg"))
 @user2.create_profile!(username: "Bob", sex: :male, birth: "1998-06-30", age: 20,nationality: :taiwan, height: 179, occupation: :doctor, singleword: "Hello everyone", user_id: @user2.id, image: open("#{Rails.root}/public/img/noimage.jpg"))
 @user3.create_profile!(username: "Hanako", sex: :female, birth: "1997-12-30", age: 20,nationality: :taiwan, height: 170, occupation: :doctor, singleword: "ifsaifi aifasifi faufiaafsai sif iasfi ifasifi aiasfj iajsaif ai", user_id: @user3.id, image: open("#{Rails.root}/public/img/noimage.jpg"))
 @user4.create_profile!(username: "Green", sex: :female, birth: "1997-01-30", age: 21,nationality: :taiwan, height: 160, occupation: :student, singleword: "Good afternoon", user_id: @user4.id, image: open("#{Rails.root}/public/img/noimage.jpg"))

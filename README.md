@@ -1,7 +1,7 @@
 #Tapioca
 ---
-[Link](https://tapioca-app.herokuapp.com/pages/loginpage)   
-If you want to login as test user...   
+[App Link](https://tapioca-app.herokuapp.com/pages/loginpage)   
+If you want to login as a test user, please...     
 Email: test@example.com   
 Password: 111111
 
@@ -9,9 +9,9 @@ Password: 111111
 ---
 This site is for Japanese and Taiwanese people to make a friendship each other. Tapioca is loved food by many Japanese and Taiwanese.   
 The app gives you following features:   
-1. Chatting.
-1. Setting my profile.
-1. You can be friends with anyone through like / matching system.
+1. Chatting.   
+2. Setting my profile.   
+3. You can be friends with anyone through like / matching system.
 
 ##Main functions
 ---

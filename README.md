@@ -7,7 +7,7 @@ Password: 111111
 
 ##Overview
 ---
-This site is for Japanese and Taiwanese people to make a friendship each other. Tapioca is loved food by many Japanese and Taiwanese.   
+This site is for Japanese and Taiwanese people to make a friendship each other. Tapioca is the food loved by many Japanese and Taiwanese.   
 The app gives you following features:   
 1. Chatting.   
 2. Setting my profile.   
